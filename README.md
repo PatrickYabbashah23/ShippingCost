@@ -2,6 +2,7 @@
 #This is a program that calculates the weight of a package and determines the cheapest method of shipping
 
 #Calculates the weight of the package by the pound being shipped on Ground
+
 def ground_shipping_cost(weight):
   
   if weight < 2:
@@ -15,13 +16,16 @@ def ground_shipping_cost(weight):
     
   return 20 + (pound_price *  weight)
 
-  #Prints the total cost to ground ship package according to it's weight   
+#Prints the total cost to ground ship package according to it's weight   
+
 print(ground_shipping_cost(8.4))
 
 #Premium Ground Shipping Price
+
 ship_premium = 125
 
 #Calculates the weight of the package by the pound being shipped on Drone
+
 def drone_shipping_cost(weight):
   if weight <= 2:
     pound_price = 4.50
@@ -37,6 +41,7 @@ def drone_shipping_cost(weight):
 print(drone_shipping_cost(1.5))
 
 #Finds the cheapest shipping method and then ells the user
+
 def cheapest_shipping_print(weight):
   
   ground = ground_shipping_cost(weight)
@@ -54,6 +59,7 @@ def cheapest_shipping_print(weight):
     cost = drone
     
   #$%.2f acts as a float to display the dollar amount and %s acts as a string  
+  
   print("The cheapest shipping method that we have is $%.2f with %s shipping. " % (cost, method))
 
 cheapest_shipping_print(3)
